@@ -123,6 +123,10 @@ p {
     width: calc(75% - 1.875rem);
 }
 
+.column-12 {
+    width: calc(100% - 1.875rem);
+}
+
 /* BREADCRUMBS (will not use for now) */
 #breadcrumbs-container {
     padding-top: 1.375rem;
