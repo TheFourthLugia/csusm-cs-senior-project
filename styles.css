@@ -46,6 +46,10 @@ p {
     text-rendering: optimizeLegibility;
 }
 
+li {
+    font-size: inherit;
+}
+
 .site-wrapper {
     overflow: scroll;
     position: relative;
@@ -157,6 +161,22 @@ p {
     margin-top: .6875rem;
 }
 
+/* Buttons */
+#page-filter a {
+    color: #47484d;
+    font-family: "Montserrat";
+    font-size: .9rem !important;
+    font-weight: 500;
+    display: block !important;
+    line-height: 1.2rem !important;
+    padding: .5rem .5rem .5rem .625rem !important;
+    text-decoration: none;
+}
+
+#page-filter a:hover {
+    background: rgba(0,77,150,0.12);
+}
+
 .filter-panel {
     margin: 0 0 2rem 0;
     background-color: rgba(0,77,150,0.06);
@@ -168,12 +188,87 @@ p {
     padding-bottom: 4px;
 }
 
-#filter-title {
+.filter-title {
     font-family: "Montserrat";
     font-size: 1.125rem !important;
     font-weight: 700;
     line-height: 1.5rem !important;
     padding: .9375rem 0 0 .625rem;
     text-transform: uppercase;
-    padding-right: .625rem !important;
+}
+
+.filter-body li {
+    list-style-type: none !important;
+    margin-bottom: .5rem;
+}
+
+.filter-body {
+    padding: 10px 10px !important;
+}
+
+.filter-section {
+    margin-bottom: .5rem;
+}
+
+.filter-name {
+    font-family: "Montserrat";
+    font-weight: 800 !important;
+    font-size: .9rem !important;
+    display: block !important;
+    line-height: 1.2rem !important;
+    padding: .5rem .5rem .5rem .625rem !important;
+}
+
+/* PROJECT LIST */
+.project-list {
+    padding: 20px;
+    margin-left: 0;
+    background: rgb(247, 247, 247);
+    list-style-type: none;
+}
+
+.project-item {
+    margin-bottom: 40px;
+}
+
+.project-item-badges {
+    display: flex;
+    justify-content: flex-start;
+    padding-right: 5px;
+}
+
+.project-item-badge {
+    padding: 2px 10px 2px 10px;
+    font-size: 0.8rem;
+    height: 20px;
+    color: white;
+    font-weight: 500;
+    margin-right: 10px;
+    display: flex;
+}
+
+.subject {
+    background-color: rgb(0 77 150);
+}
+
+.projecttype {
+    background-color: rgb(0 77 150);
+}
+
+.project-item-container {
+    display: flex;
+    margin-top: 15px;
+}
+
+.project-item-thumbnail {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+}
+
+.project-item-container h3 {
+    margin: 0;
+}
+.project-item-container p {
+    margin-bottom: 1rem;
 }
