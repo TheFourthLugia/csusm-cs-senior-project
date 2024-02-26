@@ -39,6 +39,15 @@ h3 {
     margin-bottom: 1.25rem;
 }
 
+a {
+    line-height: inherit;
+    color: #bc4418;
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom: 1px dotted #afafaf;
+    background-color: transparent;
+}
+
 p {
     margin-bottom: 2rem;
     font-size: inherit;
@@ -142,6 +151,10 @@ li {
     width: calc(25% - 1.875rem);
 }
 
+.column-6 {
+    width: calc(50% - 1.875rem);
+}
+
 .column-9 {
     width: calc(75% - 1.875rem);
 }
@@ -150,10 +163,68 @@ li {
     width: calc(100% - 1.875rem);
 }
 
-/* BREADCRUMBS (will not use for now) */
-#breadcrumbs-container {
-    padding-top: 1.375rem;
-    margin-bottom: .3125rem;
+/* NAVIGATION PANEL */
+#page-nav {
+    margin-top: .6875rem;
+}
+
+/* Buttons */
+#page-nav a {
+    color: #47484d;
+    font-family: "Montserrat";
+    font-size: .9rem !important;
+    font-weight: 500;
+    display: block !important;
+    line-height: 1.2rem !important;
+    padding: .5rem .5rem .5rem .625rem !important;
+    text-decoration: none;
+    border: none;
+}
+
+#page-nav a:hover {
+    background: rgba(0,77,150,0.12);
+}
+
+.nav-panel {
+    margin: 0 0 2rem 0;
+    background-color: rgba(0,77,150,0.06);
+    border: 1px solid rgba(0,77,150,.1);
+    border-top: 4px solid rgb(0 77 150);
+    background-repeat: no-repeat;
+    background-position-x: 72px;
+    background-position-y: 13px;
+    padding-bottom: 4px;
+}
+
+.nav-title {
+    font-family: "Montserrat";
+    font-size: 1.125rem !important;
+    font-weight: 700;
+    line-height: 1.5rem !important;
+    padding: .9375rem 0 0 .625rem;
+    text-transform: uppercase;
+}
+
+.nav-body li {
+    list-style-type: none !important;
+    margin-bottom: .5rem;
+}
+
+.nav-body {
+    padding: 10px 10px !important;
+}
+
+.nav-section {
+    margin-bottom: .5rem;
+}
+
+.nav-name {
+    font-family: "Montserrat";
+    font-weight: 800 !important;
+    font-size: .9rem !important;
+    display: block !important;
+    line-height: 1.2rem !important;
+    padding: .5rem .5rem .5rem .625rem !important;
 }
 
 /* FILTER PANEL */
@@ -171,6 +242,7 @@ li {
     line-height: 1.2rem !important;
     padding: .5rem .5rem .5rem .625rem !important;
     text-decoration: none;
+    border: none;
 }
 
 #page-filter a:hover {
@@ -219,6 +291,65 @@ li {
     padding: .5rem .5rem .5rem .625rem !important;
 }
 
+.register-button {
+    background-color: rgb(0 77 150);
+    color: white !important;
+    text-align: center;
+}
+
+.register-button:hover {
+    background-color: rgb(0 40 120) !important;
+}
+
+/* BREADCRUMBS */
+#breadcrumbs-container {
+    padding-top: 1.375rem;
+    margin-bottom: .3125rem;
+}
+
+.breadcrumbs {
+    background-color: white;
+    padding: 0.5rem 0 0.35rem .15rem;
+    border: none !important;
+    margin-bottom: .5rem !important;
+    list-style: none;
+}
+
+.breadcrumbs li {
+    font-size: .875rem !important;
+    text-transform: none;
+    font-family: "Roboto", Arial, sans-serif !important;
+    margin: 0 !important;
+    float: left;
+    color: #0a0a0a;
+    cursor: default;
+}
+
+.breadcrumbs li a {
+    color: #bc441b !important;
+    text-transform: none;
+    font-size: .9rem;
+    font-family: "Roboto", Arial, sans-serif !important;
+    margin: 0 !important;
+}
+
+.breadcrumbs li+li:before {
+    position: relative;
+    margin: 0 .55rem;
+    opacity: 1;
+    color: #cacaca;
+    content: "//";
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+}
+
 /* PROJECT LIST */
 .project-list {
     padding: 20px;
@@ -241,18 +372,20 @@ li {
     padding: 2px 10px 2px 10px;
     font-size: 0.8rem;
     height: 20px;
-    color: white;
+    color: rgb(0 77 150);
     font-weight: 500;
     margin-right: 10px;
     display: flex;
 }
 
 .subject {
-    background-color: rgb(0 77 150);
+    background-color: white;
+    border: 2px solid rgb(0 77 150);
 }
 
 .projecttype {
-    background-color: rgb(0 77 150);
+    background-color: white;
+    border: 2px solid rgb(0 77 150);
 }
 
 .project-item-container {
@@ -261,8 +394,8 @@ li {
 }
 
 .project-item-thumbnail {
-    width: 150px;
-    height: 150px;
+    /*width: 150px;*/
+    height: 280px;
     margin-right: 20px;
 }
 
