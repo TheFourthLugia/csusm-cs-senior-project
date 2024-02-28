@@ -55,6 +55,22 @@
                     <div class="grid-container">
                         <div class="grid-x grid-margin-x align-justify">
                             <div class="cell column-3">
+                                 <!-- Navigation pane ------------------------------------->
+                                <div id="page-nav">
+                                    <div class="nav-panel">
+                                        <div class="nav-title">
+                                            <a href="index.html">CS/CIS Capstone</a>
+                                        </div>
+                                        <ul class="nav-body">
+                                            <li>
+                                                <a href="quiz.html">CS or CIS Quiz</a>
+                                            </li>
+                                            <li>
+                                                <a id="navfocus" href="portfolio.html">Senior Projects</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                                 <!-- FILTER PANEL ---------------------------------------------------------------------->
                                 <div id="page-filter">
                                     <div class="filter-panel">
@@ -63,28 +79,42 @@
                                         </div>
                                          <!-- Insert filter buttons here ------------------------------------->
                                         <ul class="filter-body">
-                                            <li class="filter-section">
+                                            <li class="filter-section" id="year-filter">
+                                                <div class="filter-name">By Year</div>
+                                                <ul style="display: block;">
+                                                    <li><a class="filter-button" onclick="filterProjects('year', '2023')">2023</a></li>
+                                                    <li><a class="filter-button" onclick="filterProjects('year', '2022')">2022</a></li>
+                                                    <li><a class="filter-button" onclick="filterProjects('year', '2021')">2021</a></li>
+                                                    <li><a class="filter-button" onclick="filterProjects('year', '2020')">2020</a></li>
+                                                    <li><a class="filter-button" onclick="filterProjects('year', '2019')">2019</a></li>
+                                                    <li><a class="filter-button" onclick="filterProjects('year', '2018')">2018</a></li>
+                                                    <li><a class="filter-button" onclick="filterProjects('year', '2017')">2017</a></li>
+                                                    <li><a class="filter-button" onclick="filterProjects('year', '2015')">2015</a></li>
+                                                    <li><a class="filter-button" onclick="filterProjects('year', '2014')">2014</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="filter-section" id="subject-filter">
                                                 <div class="filter-name">By Subject</div>
                                                 <ul style="display: block;">
                                                     <li>
-                                                        <a class="filter-button" href="#">Computer Science</a>
+                                                        <a class="filter-button" onclick="filterProjects('subject', 'Computer Science')">Computer Science</a>
                                                     </li>
                                                     <li>
-                                                        <a class="filter-button" href="#">Computer Information Systems</a>
+                                                        <a class="filter-button" onclick="filterProjects('subject', 'Computer Information Systems')">Computer Information Systems</a>
                                                     </li>
                                                     <li>
-                                                        <a class="filter-button" href="#">Software Engineering</a>
+                                                        <a class="filter-button" onclick="filterProjects('subject', 'Software Engineering')">Software Engineering</a>
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li class="filter-section">
+                                            <li class="filter-section" id="project-filter">
                                                 <div class="filter-name">By Project Type</div>
                                                 <ul style="display: block;">
                                                     <li>
-                                                        <a class="filter-button" href="#">Capstone Project</a>
+                                                        <a class="filter-button" onclick="filterProjects('project', 'Capstone Project')">Capstone Project</a>
                                                     </li>
                                                     <li>
-                                                        <a class="filter-button" href="#">Course Project</a>
+                                                        <a class="filter-button" onclick="filterProjects('project', 'Course Project')">Course Project</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -149,14 +179,15 @@
                                      <!-- Insert project entries here ------------------------------------->
                                     <li class="project-item">
                                         <div class="project-item-badges">
-                                            <div class="project-item-badge subject">Computer Science</div>
-                                            <div class="project-item-badge projecttype">Course Project</div>
+                                            <div class="project-item-badge projectyear">2023</div>
+                                            <div class="project-item-badge projectsubject">Computer Information Systems</div>
+                                            <div class="project-item-badge projecttype">Capstone Project</div>
                                         </div>
                                         <div class="project-item-container">
-                                            <img class="project-item-thumbnail" src="https://www.csusm.edu/communications/images/branding-images/spirit-logo01.jpg">
+                                            <img class="project-item-thumbnail" src="https://i.postimg.cc/L8FXsbzy/avengers.jpg">
                                             <div class="project-item-textcontainer">
-                                                <h3>Lorem ipsum dolor sit amet</h3>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                <h3>The Avengers</h3>
+                                                <p>The Avengers were tasked to create the structure of the website for the CIS Capstone project. Plans would be to later deploy and connect the website to CSUSM's official website for information for students and faculty as well as inquries from prospective project sponsors.</p>
                                                 <a href="#">View Poster ↗</a>
                                             </div>
                                         </div>
@@ -164,19 +195,339 @@
 
                                     <li class="project-item">
                                         <div class="project-item-badges">
-                                            <div class="project-item-badge subject">Computer Science</div>
-                                            <div class="project-item-badge projecttype">Course Project</div>
+                                            <div class="project-item-badge projectyear">2023</div>
+                                            <div class="project-item-badge projectsubject">Computer Information Systems</div>
+                                            <div class="project-item-badge projecttype">Capstone Project</div>
                                         </div>
                                         <div class="project-item-container">
-                                            <img class="project-item-thumbnail" src="https://www.csusm.edu/communications/images/branding-images/spirit-logo01.jpg">
+                                            <img class="project-item-thumbnail" src="https://i.postimg.cc/wMFCd3Q8/angry-nerds.jpg">
                                             <div class="project-item-textcontainer">
-                                                <h3>Lorem ipsum dolor sit amet</h3>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                <h3>Angry Nerds</h3>
+                                                <p>Tasked with a project involving simulating traffic patterns using custom maps and roadways.</p>
                                                 <a href="#">View Poster ↗</a>
                                             </div>
                                         </div>
                                     </li>
 
+                                    <li class="project-item">
+                                        <div class="project-item-badges">
+                                            <div class="project-item-badge projectyear">2023</div>
+                                            <div class="project-item-badge projectsubject">Computer Information Systems</div>
+                                            <div class="project-item-badge projecttype">Capstone Project</div>
+                                        </div>
+                                        <div class="project-item-container">
+                                            <img class="project-item-thumbnail" src=" https://i.postimg.cc/WzCjbGjC/Image-20230510122737.jpg">
+                                            <div class="project-item-textcontainer">
+                                                <h3>System Strategists</h3>
+                                                <p>Mentor Match is a tool developed by CIS students to accelerate the process of pairing mentors with mentees.</p>
+                                                <a href="#">View Poster ↗</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="project-item">
+                                        <div class="project-item-badges">
+                                            <div class="project-item-badge projectyear">2023</div>
+                                            <div class="project-item-badge projectsubject">Computer Information Systems</div>
+                                            <div class="project-item-badge projecttype">Capstone Project</div>
+                                        </div>
+                                        <div class="project-item-container">
+                                            <img class="project-item-thumbnail" src=" https://i.postimg.cc/NFgb9SGr/Image-20230510122739.jpg">
+                                            <div class="project-item-textcontainer">
+                                                <h3>Top Tech</h3>
+                                                <p>Top Tech created a tool to modify children's stories using a language model to parse and replace names, pronous, and reformat for different grade levels.</p>
+                                                <a href="#">View Poster ↗</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="project-item">
+                                        <div class="project-item-badges">
+                                            <div class="project-item-badge projectyear">2023</div>
+                                            <div class="project-item-badge projectsubject">Computer Information Systems</div>
+                                            <div class="project-item-badge projecttype">Capstone Project</div>
+                                        </div>
+                                        <div class="project-item-container">
+                                            <img class="project-item-thumbnail" src="https://i.postimg.cc/s2G3q0rS/Image-20230510122740.jpg">
+                                            <div class="project-item-textcontainer">
+                                                <h3>Blue Team</h3>
+                                                <p>Blue Team was tasked with creating a tool to identify tennis balls for autonomous robot cleanup.</p>
+                                                <a href="#">View Poster ↗</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="project-item">
+                                        <div class="project-item-badges">
+                                            <div class="project-item-badge projectyear">2023</div>
+                                            <div class="project-item-badge projectsubject">Computer Information Systems</div>
+                                            <div class="project-item-badge projecttype">Capstone Project</div>
+                                        </div>
+                                        <div class="project-item-container">
+                                            <img class="project-item-thumbnail" src=" https://i.postimg.cc/Fs03rX4b/Image-202305101227402.jpg ">
+                                            <div class="project-item-textcontainer">
+                                                <h3>CougarByte</h3>
+                                                <p>CougarByte was tasked to create a tool to highlight and list specific colors on an image. These values would be used to train Blue Team's model for automated cleanup.</p>
+                                                <a href="#">View Poster ↗</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="project-item">
+                                        <div class="project-item-badges">
+                                            <div class="project-item-badge projectyear">2022</div>
+                                            <div class="project-item-badge projectsubject">Computer Information Systems</div>
+                                            <div class="project-item-badge projecttype">Capstone Project</div>
+                                        </div>
+                                        <div class="project-item-container">
+                                            <img class="project-item-thumbnail" src=" https://i.postimg.cc/0rgDFyYY/image.png ">
+                                            <div class="project-item-textcontainer">
+                                                <h3>SAIRA</h3>
+                                                <p>Dr Schultz has worked with CSUSM before in previous semesters to develop a tool to pull images from Google streets and the machine learning algorithm. SAIRA's goal was to develope a web pased cloud platform for this app.</p>
+                                                <a href="#">View Poster ↗</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="project-item">
+                                        <div class="project-item-badges">
+                                            <div class="project-item-badge projectyear">2022</div>
+                                            <div class="project-item-badge projectsubject">Computer Information Systems</div>
+                                            <div class="project-item-badge projecttype">Capstone Project</div>
+                                        </div>
+                                        <div class="project-item-container">
+                                            <img class="project-item-thumbnail" src=" https://i.postimg.cc/vmLy6q2b/image.png ">
+                                            <div class="project-item-textcontainer">
+                                                <h3>Sushi Team & Keep America Beautiful</h3>
+                                                <p>A machine learning algorithm that can detect instances of litter in a received Google Street image system.</p>
+                                                <a href="#">View Poster ↗</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="project-item">
+                                        <div class="project-item-badges">
+                                            <div class="project-item-badge projectyear">2021</div>
+                                            <div class="project-item-badge projectsubject">Computer Information Systems</div>
+                                            <div class="project-item-badge projecttype">Capstone Project</div>
+                                        </div>
+                                        <div class="project-item-container">
+                                            <img class="project-item-thumbnail" src=" https://i.postimg.cc/3xNPvSzD/image.png ">
+                                            <div class="project-item-textcontainer">
+                                                <h3>Northrop Grumman & PandemXSolutions</h3>
+                                                <p>Northrop Grumman needed a tool to be able to organize large amounts of data dynamically and then display the data and assemble to understand interface.</p>
+                                                <a href="#">View Poster ↗</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="project-item">
+                                        <div class="project-item-badges">
+                                            <div class="project-item-badge projectyear">2021</div>
+                                            <div class="project-item-badge projectsubject">Computer Information Systems</div>
+                                            <div class="project-item-badge projecttype">Capstone Project</div>
+                                        </div>
+                                        <div class="project-item-container">
+                                            <img class="project-item-thumbnail" src=" https://i.postimg.cc/02BVL8Hb/image.png ">
+                                            <div class="project-item-textcontainer">
+                                                <h3>Cougar Student Technologies for Keep America Beautiful</h3>
+                                                <p>Keep America Beautiful requested CSUSM CIS 490 students to assist in developing an application of machine-learning to detect litter from street view images from Google services.</p>
+                                                <a href="#">View Poster ↗</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="project-item">
+                                        <div class="project-item-badges">
+                                            <div class="project-item-badge projectyear">2020</div>
+                                            <div class="project-item-badge projectsubject">Computer Information Systems</div>
+                                            <div class="project-item-badge projecttype">Capstone Project</div>
+                                        </div>
+                                        <div class="project-item-container">
+                                            <img class="project-item-thumbnail" src="https://i.postimg.cc/qMvk1G9p/image.png">
+                                            <div class="project-item-textcontainer">
+                                                <h3>Cougar Information Solutions for Keep America Beautiful: User Interface</h3>
+                                                <p>Keep America Beatiful tasked CSUSM CIS 490 students to develop an image detection system to detect litter from surrounding objects.</p>
+                                                <a href="#">View Poster ↗</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="project-item">
+                                        <div class="project-item-badges">
+                                            <div class="project-item-badge projectyear">2020</div>
+                                            <div class="project-item-badge projectsubject">Computer Information Systems</div>
+                                            <div class="project-item-badge projecttype">Capstone Project</div>
+                                        </div>
+                                        <div class="project-item-container">
+                                            <img class="project-item-thumbnail" src=" https://i.postimg.cc/cHJSFxbX/image.png ">
+                                            <div class="project-item-textcontainer">
+                                                <h3>8 For Infinity for PC Synergy</h3>
+                                                <p>PC Synergy requested students to help with looking into making an Android application for a Windows desktop postal program.</p>
+                                                <a href="#">View Poster ↗</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="project-item">
+                                        <div class="project-item-badges">
+                                            <div class="project-item-badge projectyear">2019</div>
+                                            <div class="project-item-badge projectsubject">Computer Information Systems</div>
+                                            <div class="project-item-badge projecttype">Capstone Project</div>
+                                        </div>
+                                        <div class="project-item-container">
+                                            <img class="project-item-thumbnail" src=" https://i.postimg.cc/HnQJMzBq/image.png ">
+                                            <div class="project-item-textcontainer">
+                                                <h3>Team Think for Northrop Grumman</h3>
+                                                <p>Efficient JSON based layouts for management of data, layouts, and business needs. Infinite vectors for dynamic manipulation avoid clarity loss. Useful for shape manipulation of spaces, buildings, and diagrams.</p>
+                                                <a href="#">View Poster ↗</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="project-item">
+                                        <div class="project-item-badges">
+                                            <div class="project-item-badge projectyear">2019</div>
+                                            <div class="project-item-badge projectsubject">Computer Information Systems</div>
+                                            <div class="project-item-badge projecttype">Capstone Project</div>
+                                        </div>
+                                        <div class="project-item-container">
+                                            <img class="project-item-thumbnail" src=" https://i.postimg.cc/yxBRv2g1/image.png ">
+                                            <div class="project-item-textcontainer">
+                                                <h3>Studio2B for PC Synergy</h3>
+                                                <p>PostalMate needed CSTEM students to design a way for PC Synergy to capture customer signatures for package signage. </p>
+                                                <a href="#">View Poster ↗</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="project-item">
+                                        <div class="project-item-badges">
+                                            <div class="project-item-badge projectyear">2018</div>
+                                            <div class="project-item-badge projectsubject">Computer Information Systems</div>
+                                            <div class="project-item-badge projecttype">Capstone Project</div>
+                                        </div>
+                                        <div class="project-item-container">
+                                            <img class="project-item-thumbnail" src=" https://i.postimg.cc/8zdpFntk/2018reinvent.png ">
+                                            <div class="project-item-textcontainer">
+                                                <h3>Reinvent Solution</h3>
+                                                <p>Digital visualization tool to generate how much trash is generated. Build a web portal to see how much trash is generated through an ID. </p>
+                                                <a href="#">View Poster ↗</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="project-item">
+                                        <div class="project-item-badges">
+                                            <div class="project-item-badge projectyear">2018</div>
+                                            <div class="project-item-badge projectsubject">Computer Information Systems</div>
+                                            <div class="project-item-badge projecttype">Capstone Project</div>
+                                        </div>
+                                        <div class="project-item-container">
+                                            <img class="project-item-thumbnail" src=" https://i.postimg.cc/90ZW2xk7/2018litter-detection-algorithm.png ">
+                                            <div class="project-item-textcontainer">
+                                                <h3>FixIT</h3>
+                                                <p>Litter detection algorithm to identify litter with an accuracy percentage using a GoogleAPI. </p>
+                                                <a href="#">View Poster ↗</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="project-item">
+                                        <div class="project-item-badges">
+                                            <div class="project-item-badge projectyear">2017</div>
+                                            <div class="project-item-badge projectsubject">Computer Information Systems</div>
+                                            <div class="project-item-badge projecttype">Capstone Project</div>
+                                        </div>
+                                        <div class="project-item-container">
+                                            <img class="project-item-thumbnail" src=" https://i.postimg.cc/8cVL0Xj5/2017revisionsoftware.png ">
+                                            <div class="project-item-textcontainer">
+                                                <h3>Revision Software</h3>
+                                                <p>Provide a service that that identifies recycables and trash that can capture weight. </p>
+                                                <a href="#">View Poster ↗</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="project-item">
+                                        <div class="project-item-badges">
+                                            <div class="project-item-badge projectyear">2017</div>
+                                            <div class="project-item-badge projectsubject">Computer Information Systems</div>
+                                            <div class="project-item-badge projecttype">Capstone Project</div>
+                                        </div>
+                                        <div class="project-item-container">
+                                            <img class="project-item-thumbnail" src=" https://i.postimg.cc/gJfPF8Wr/2017.png ">
+                                            <div class="project-item-textcontainer">
+                                                <h3>Team Point and Click</h3>
+                                                <p>Stand-alone desktop client that can automically import product into data table through a database rather than manually importing data. </p>
+                                                <a href="#">View Poster ↗</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="project-item">
+                                        <div class="project-item-badges">
+                                            <div class="project-item-badge projectyear">2015</div>
+                                            <div class="project-item-badge projectsubject">Computer Information Systems</div>
+                                            <div class="project-item-badge projecttype">Capstone Project</div>
+                                        </div>
+                                        <div class="project-item-container">
+                                            <img class="project-item-thumbnail" src=" https://i.postimg.cc/25Hx6N2B/2015noplace.png ">
+                                            <div class="project-item-textcontainer">
+                                                <h3>No Place Like 192.168.0.1</h3>
+                                                <p>Develop automated testing scripts for flagship product for Postal Mates. </p>
+                                                <a href="#">View Poster ↗</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="project-item">
+                                        <div class="project-item-badges">
+                                            <div class="project-item-badge projectyear">2015</div>
+                                            <div class="project-item-badge projectsubject">Computer Information Systems</div>
+                                            <div class="project-item-badge projecttype">Capstone Project</div>
+                                        </div>
+                                        <div class="project-item-container">
+                                            <img class="project-item-thumbnail" src=" https://i.postimg.cc/Y99my4Nv/2015.png ">
+                                            <div class="project-item-textcontainer">
+                                                <h3>Envisage</h3>
+                                                <p>Web service system that serve as a central repostitory for all project cost data to be analyzed.  </p>
+                                                <a href="#">View Poster ↗</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="project-item">
+                                        <div class="project-item-badges">
+                                            <div class="project-item-badge projectyear">2014</div>
+                                            <div class="project-item-badge projectsubject">Computer Information Systems</div>
+                                            <div class="project-item-badge projecttype">Capstone Project</div>
+                                        </div>
+                                        <div class="project-item-container">
+                                            <img class="project-item-thumbnail" src=" https://i.postimg.cc/yxrdgn2j/2014innovativetherapy4kid.png ">
+                                            <div class="project-item-textcontainer">
+                                                <h3>Bien Yuk</h3>
+                                                <p>Web app that will improve time consuming and cost of keeping track of patient information. </p>
+                                                <a href="#">View Poster ↗</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="project-item">
+                                        <div class="project-item-badges">
+                                            <div class="project-item-badge projectyear">2014</div>
+                                            <div class="project-item-badge projectsubject">Computer Information Systems</div>
+                                            <div class="project-item-badge projecttype">Capstone Project</div>
+                                        </div>
+                                        <div class="project-item-container">
+                                            <img class="project-item-thumbnail" src=" https://i.postimg.cc/76KszT9X/2014pcsynergy.png ">
+                                            <div class="project-item-textcontainer">
+                                                <h3>Group A</h3>
+                                                <p>Develop a program that is similar to their in-house CRM program that tracks customer sites, issues, and support tickets. </p>
+                                                <a href="#">View Poster ↗</a>
+                                            </div>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -185,5 +536,6 @@
             </div>
         </div>
         <script src="carousel.js"></script>
+        <script src="projectfilter.js"></script>
     </body>
 </html>

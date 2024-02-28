@@ -169,7 +169,7 @@ li {
 }
 
 /* Buttons */
-#page-nav a {
+#page-nav li>a {
     color: #47484d;
     font-family: "Montserrat";
     font-size: .9rem !important;
@@ -183,6 +183,7 @@ li {
 
 #page-nav a:hover {
     background: rgba(0,77,150,0.12);
+    color: #004d96;
 }
 
 .nav-panel {
@@ -203,6 +204,14 @@ li {
     line-height: 1.5rem !important;
     padding: .9375rem 0 0 .625rem;
     text-transform: uppercase;
+    padding-right: .625rem !important;
+}
+
+.nav-title a {
+    display: block !important;
+    padding: .5rem .5rem .5rem .625rem !important;
+    color: #47484d;
+    border: none !important;
 }
 
 .nav-body li {
@@ -227,6 +236,11 @@ li {
     padding: .5rem .5rem .5rem .625rem !important;
 }
 
+#navfocus {
+    color: #004d96 !important;
+    font-weight: 800 !important;
+}
+
 /* FILTER PANEL */
 #page-filter {
     margin-top: .6875rem;
@@ -247,6 +261,7 @@ li {
 
 #page-filter a:hover {
     background: rgba(0,77,150,0.12);
+    color: #004d96;
 }
 
 .filter-panel {
@@ -261,15 +276,17 @@ li {
 }
 
 .filter-title {
+    color: #47484d;
     font-family: "Montserrat";
     font-size: 1.125rem !important;
     font-weight: 700;
     line-height: 1.5rem !important;
-    padding: .9375rem 0 0 .625rem;
+    padding: 1.4375rem 0 0 1.125rem;
     text-transform: uppercase;
 }
 
 .filter-body li {
+    color: #47484d;
     list-style-type: none !important;
     margin-bottom: .5rem;
 }
@@ -289,6 +306,11 @@ li {
     display: block !important;
     line-height: 1.2rem !important;
     padding: .5rem .5rem .5rem .625rem !important;
+}
+
+.filterfocus {
+    color: #004d96 !important;
+    font-weight: 800 !important;
 }
 
 .register-button {
@@ -378,12 +400,17 @@ li {
     display: flex;
 }
 
-.subject {
+.projectsubject {
     background-color: white;
     border: 2px solid rgb(0 77 150);
 }
 
 .projecttype {
+    background-color: white;
+    border: 2px solid rgb(0 77 150);
+}
+
+.projectyear {
     background-color: white;
     border: 2px solid rgb(0 77 150);
 }
@@ -394,8 +421,12 @@ li {
 }
 
 .project-item-thumbnail {
-    /*width: 150px;*/
-    height: 280px;
+    width: 100%;
+    height: 100%;
+    min-width: 375px;
+    max-width: 375px;
+    max-height: 280px;
+    object-fit: cover;
     margin-right: 20px;
 }
 
