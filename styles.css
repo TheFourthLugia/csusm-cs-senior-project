@@ -181,9 +181,33 @@ li {
     border: none;
 }
 
+/* Button focused */
+
+#page-nav .vnavopen>a {
+    font-weight: 800 !important;
+}
+
+
 #page-nav a:hover {
     background: rgba(0,77,150,0.12);
     color: #004d96;
+}
+
+.nav-body ul {
+    padding: 0;
+}
+
+.nav-body > .vnavopen > ul {
+    border-left: 4px solid rgba(0,77,150,.09);
+    margin-left: 10px;
+}
+
+.nav-body > .vnavopen > ul > li a.vnavactive {
+    margin-left: -4px !important;
+}
+
+.nav-body .vnavactive {
+    border-left: 4px solid #004d96 !important;
 }
 
 .nav-panel {
@@ -313,10 +337,35 @@ li {
     font-weight: 800 !important;
 }
 
+/* BUTTONS */
+
+.button {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 1rem 0 .15rem;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    padding: 4px 10px;
+    font-size: 1rem;
+    background-color: #0078cc;
+    color: white;
+    font-weight: normal;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 0;
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
+}
+
+.button:hover {
+    background-color: rgb(0 40 120) !important;
+}
+
 .register-button {
     background-color: rgb(0 77 150);
     color: white !important;
     text-align: center;
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
 }
 
 .register-button:hover {

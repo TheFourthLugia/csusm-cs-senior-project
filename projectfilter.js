@@ -1,6 +1,7 @@
 var yearFilter = "";
 var subjectFilter = "";
 var projectFilter = "";
+var selectedFilter = "";
 
 function updateList() {
     var filter, a, txtValue, projectitems, projectbadges, projectyear, projectsubject, projecttype;
@@ -47,20 +48,27 @@ function updateList() {
     }
 }
 
+// Applies filters based on user selection
 function filterProjects(filterType, filterValue) {
     if (filterType == "year") {
+        subjectFilter = "";
+        projectFilter = "";
         if (yearFilter == filterValue) {
             yearFilter = "";
         } else {
             yearFilter = filterValue;
         }
     } else if (filterType == "subject") {
+        yearFilter = "";
+        projectFilter = "";
         if (subjectFilter == filterValue) {
             subjectFilter = "";
         } else {
             subjectFilter = filterValue;
         }
     } else {
+        yearFilter = "";
+        subjectFilter = "";
         if (projectFilter == filterValue) {
             projectFilter = "";
         } else {
