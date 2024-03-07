@@ -572,3 +572,72 @@ li {
     from {opacity: .4}
     to {opacity: 1}
   }
+
+  /* ACCORDION */
+  .accordion {
+    margin-left: 0;
+    padding: 0;
+    background: white;
+    list-style-type: none;
+  }
+
+  .accordion .accordion-item {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .accordion-title {
+    position: relative;
+    display: block;
+    padding: 1.125rem 1rem;
+    border: 1px solid #D4D9D9;
+    border-bottom: 0;
+    font-size: 1.125rem;
+    font-weight: 600 !important;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    line-height: 1;
+    color: #222 !important;
+    padding-right: 50px;
+  }
+
+ .is-active > .accordion-title {
+    background-color: #eee;
+  }
+
+  .is-active > .accordion-title::before {
+    content: "-";
+  }
+
+  .accordion-title::before {
+    top: 18px;
+    color: #222;
+    font-size: 38px;
+    font-weight: 800;
+    position: absolute;
+    right: 1rem;
+    margin-top: -0.5rem;
+    content: "+";
+    box-sizing: inherit;
+  }
+
+  .accordion-title:hover {
+    background-color: rgba(0,77,150,0.06);
+  }
+
+  .accordion-content {
+    padding: 1rem;
+    border: 1px solid #D4D9D9;
+    border-bottom: 0;
+    background-color: white;
+    color: #222;
+    display: none;
+  }
+
+  :last-child:not(.is-active) > .accordion-title {
+    border-bottom: 1px solid #D4D9D9;
+  }
+
+  :last-child > .accordion-content:last-child {
+    border-bottom: 1px solid #D4D9D9;
+  }
+
