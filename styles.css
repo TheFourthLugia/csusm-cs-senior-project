@@ -111,6 +111,10 @@ hr {
     #nav-container-sm {
         display: block !important;
     }
+
+    .callout {
+        display: block !important;
+    }
 }
 
 /* HEADER */
@@ -939,11 +943,19 @@ hr {
     z-index: 0;
   }
 
+  .callout > :first-child {
+    margin-top: 0;
+  }
+
   .c-callout .c-callout__title {
     font-weight: 600;
     font-size: 1.15rem;
     margin-bottom: 1rem;
     color: rgb(71 72 77);
+  }
+
+  .callout-bottom {
+    margin-top: 50px;
   }
 
 /* FOOTER */
