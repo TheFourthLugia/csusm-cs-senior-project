@@ -95,7 +95,7 @@ hr {
     display: none !important;
 }
 
-@media (max-width: 900px){
+@media (max-width: 1024px){
     .show-for-large {
         display: none;
     }
