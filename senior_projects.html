@@ -14,6 +14,46 @@
     </head>
     <body>
         <div class="site-wrapper">
+            <!-- NAVBAR FOR MOBILE SCREENS --------------------------->
+            <div id="nav-container-sm" class="show-for-small">
+                <div id="nav-container-sm-menuheader" class="flex-container align-middle">
+                    <div id="sitemenulbl">CS / CIS</div>
+                    <div id="sitemenuclose">
+                        <a onclick="close_mobile_navbar();">
+                            <span class="control-sprite">
+                                <img id="navbutton-sm-close" class="container-link" src="https://www.csusm.edu/_resources/images/buttons/primary-controls.png">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-container full">
+                    <div class="grid-x">
+                        <nav id="sitenav-small" class="cell small-12 site-nav site-navsm vnavsmall">
+                            <ul class="navtop">
+                                <li class="vnavopen">
+                                    <div class="navfolder">
+                                        <a class="firstitem" href="about.html">About CS/CIS</a>
+                                    </div>
+                                    <ul class="show">
+                                        <li><a href="comparison.html">Comparison</a></li>
+                                        <li><a href="quiz.html">CS or CIS Quiz</a></li>
+                                    </ul>
+                                </li>
+                                <li class="vnavopen">
+                                    <div class="navfolder">
+                                        <a class="vnavactive" href="senior_projects.html">Senior Course Projects</a>
+                                    </div>
+                                    <ul class="show">
+                                        <li><a href="capstone.html">Capstone Project</a></li>
+                                        <li><a href="portfolio.html">Senior Project Portfolio</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <script src="mobile-navbar.js"></script>
             <!-- HEADER BAR ----------------------------->
             <header class="header-bar show-for-large">
                 <div class="header-logo">
@@ -42,10 +82,10 @@
             </div>
             <div id="top-banner-sm" class="show-for-small">
                 <div class="top-banner-text-org top-banner-textcontainer">
-                    <a class="org" href="#">Senior Course Projects</a>
+                    <a class="org" href="index.html">Computer Science & Information Systems</a>
                 </div>
                 <div class="top-banner-menu">
-                    <a id="navbutton-sm"><span class="material-symbols-outlined">menu</span></a>
+                    <a id="navbutton-sm" onclick="open_mobile_navbar();"><span class="material-symbols-outlined">menu</span></a>
                 </div>
             </div>
             <!-- CONTENT ------------------------------------->
@@ -122,6 +162,15 @@
                         </div>
                     </div>
                 </div>
+                <footer id="footer">
+                    <div class="grid-container full">
+                        <div id="footer-content" class="grid-x grid-margin-x footer-bottom">
+                            <div class="cell large-6 small-12 footer-bottom-links">
+                                Made by the Senior Course Projects team
+                            </div>
+                        </div>
+                    </div>
+                </footer>
             </div>
         </div>
     </body>
