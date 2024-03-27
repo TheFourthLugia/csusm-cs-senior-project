@@ -115,6 +115,16 @@ hr {
     .callout {
         display: block !important;
     }
+
+    .project-item-container {
+        display: block !important;
+    }
+
+    .project-item-thumbnail {
+        max-width: 100% !important;
+        min-width: 0% !important;
+        max-height: 350px !important;
+    }
 }
 
 /* HEADER */
@@ -550,7 +560,7 @@ hr {
 
 /* FILTER PANEL */
 #page-filter {
-    margin-top: .6875rem;
+    margin-top: 350px;
 }
 
 /* Buttons */
@@ -570,6 +580,29 @@ hr {
     background: rgba(0,77,150,0.12);
     color: #004d96;
 }
+
+/* FILTERS FOR MOBILE VIEWRS */
+#page-filter-sm {
+    width: 100%;
+}
+
+#page-filter-sm a {
+    color: #47484d;
+    font-family: "Montserrat";
+    font-size: .9rem !important;
+    font-weight: 500;
+    display: flex !important;
+    line-height: 1.2rem !important;
+    padding: .5rem .5rem .5rem .625rem !important;
+    text-decoration: none;
+    border: none;
+}
+
+#page-filter-sm a:hover {
+    background: rgba(0,77,150,0.12);
+    color: #004d96;
+}
+
 
 .filter-panel {
     margin: 0 0 2rem 0;
@@ -613,6 +646,16 @@ hr {
     display: block !important;
     line-height: 1.2rem !important;
     padding: .5rem .5rem .5rem .625rem !important;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+.filter-button {
+    margin-right: 0.8rem;
 }
 
 .filterfocus {
@@ -718,6 +761,7 @@ hr {
 
 .project-item-badges {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     padding-right: 5px;
 }
@@ -729,6 +773,7 @@ hr {
     color: rgb(0 77 150);
     font-weight: 500;
     margin-right: 10px;
+    margin-bottom: 5px;
     display: flex;
 }
 

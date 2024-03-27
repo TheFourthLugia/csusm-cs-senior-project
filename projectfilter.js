@@ -7,7 +7,7 @@ function updateList() {
     var filter, a, txtValue, projectitems, projectbadges, projectyear, projectsubject, projecttype;
     // Update the filter list to display which ones are selected ------------------------------------
     // Year filter
-    filter = document.querySelectorAll('#year-filter ul>li>a');
+    filter = document.querySelectorAll('#year-filter ul>li>a, #year-filter-sm > .filter-buttons > .filter-button');
     for (i=0; i<filter.length; i++) {
         if (filter[i].textContent == yearFilter) {
             filter[i].classList.add("filterfocus")
@@ -16,7 +16,7 @@ function updateList() {
         }
     }
     // Subject filter
-    filter = document.querySelectorAll('#subject-filter ul>li>a');
+    filter = document.querySelectorAll('#subject-filter ul>li>a, #subject-filter-sm > .filter-buttons > .filter-button');
     for (i=0; i<filter.length; i++) {
         if (filter[i].textContent == subjectFilter) {
             filter[i].classList.add("filterfocus")
@@ -25,7 +25,7 @@ function updateList() {
         }
     }
     // Project filter
-    filter = document.querySelectorAll('#project-filter ul>li>a');
+    filter = document.querySelectorAll('#project-filter ul>li>a, #project-filter-sm > .filter-buttons > .filter-button');
     for (i=0; i<filter.length; i++) {
         if (filter[i].textContent == projectFilter) {
             filter[i].classList.add("filterfocus")

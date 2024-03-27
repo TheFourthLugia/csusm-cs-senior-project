@@ -138,6 +138,17 @@
                                         </ul>
                                     </div>
                                 </div>
+                                <!-- Become a Sponsor Panel -->
+                                <div class="callout c-callout">
+                                    <div class="c-callout__title">
+                                        <span>Become a Sponsor</span>
+                                    </div>
+                                    <div class="c-callout__text">
+                                        If you wish to sponsor a CSUSM project, click the button below to open a form.
+                                        <br />
+                                        <a class="button" href="#">Sponsor Sign-Up</a>
+                                    </div>
+                                </div>
                                 <!-- FILTER PANEL ---------------------------------------------------------------------->
                                 <div id="page-filter">
                                     <div class="filter-panel">
@@ -188,17 +199,6 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <!-- Become a Sponsor Panel -->
-                                <div class="callout c-callout">
-                                    <div class="c-callout__title">
-                                        <span>Become a Sponsor</span>
-                                    </div>
-                                    <div class="c-callout__text">
-                                        If you wish to sponsor a CSUSM project, click the button below to open a form.
-                                        <br />
-                                        <a class="button" href="#">Sponsor Sign-Up</a>
-                                    </div>
-                                </div>
                             </div>
                             <div class="cell large-9 small-12">
                                 <h1>Senior Project Portfolio</h1>
@@ -242,7 +242,60 @@
                                 </div>
 
                                 <h2>Project list</h2>
-                                <p>Use the filter buttons above to search for projects that are made for your selected course or made for a Capstone or Regular course.</p>
+                                <p>Use the filter buttons to search for projects that are made for your selected course or made for a Capstone or Regular course. You can only apply one filter at a time.</p>
+
+                                <!-- FILTER BUTTONS FOR MOBILE USERS ----------------------------->
+                                <div id="page-filter-sm" class="show-for-small">
+                                    <div class="filter-panel" style="width: 100%;">
+                                        <div class="filter-title">Filters</div>
+                                        <ul class="filter-body">
+                                            <li class="filter-section" id="year-filter-sm">
+                                                <div class="filter-name">By Year</div>
+                                                <div class="filter-buttons">
+                                                    <a class="filter-button" onclick="filterProjects('year', '2023')">2023</a>
+                                                    <a class="filter-button" onclick="filterProjects('year', '2022')">2022</a>
+                                                    <a class="filter-button" onclick="filterProjects('year', '2021')">2021</a>
+                                                    <a class="filter-button" onclick="filterProjects('year', '2020')">2020</a>
+                                                    <a class="filter-button" onclick="filterProjects('year', '2019')">2019</a>
+                                                    <a class="filter-button" onclick="filterProjects('year', '2018')">2018</a>
+                                                    <a class="filter-button" onclick="filterProjects('year', '2017')">2017</a>
+                                                    <a class="filter-button" onclick="filterProjects('year', '2015')">2015</a>
+                                                    <a class="filter-button" onclick="filterProjects('year', '2014')">2014</a>
+                                                </div>
+                                                <!--
+                                                <ul style="display: flex;">
+                                                    <li><a class="filter-button" onclick="filterProjects('year', '2023')">2023</a></li>
+                                                    <li><a class="filter-button" onclick="filterProjects('year', '2022')">2022</a></li>
+                                                    <li><a class="filter-button" onclick="filterProjects('year', '2021')">2021</a></li>
+                                                    <li><a class="filter-button" onclick="filterProjects('year', '2020')">2020</a></li>
+                                                    <li><a class="filter-button" onclick="filterProjects('year', '2019')">2019</a></li>
+                                                    <li><a class="filter-button" onclick="filterProjects('year', '2018')">2018</a></li>
+                                                    <li><a class="filter-button" onclick="filterProjects('year', '2017')">2017</a></li>
+                                                    <li><a class="filter-button" onclick="filterProjects('year', '2015')">2015</a></li>
+                                                    <li><a class="filter-button" onclick="filterProjects('year', '2014')">2014</a></li>
+                                                </ul>
+                                                -->
+                                            </li>
+                                            <li class="filter-section" id="subject-filter-sm">
+                                                <div class="filter-name">By Subject</div>
+                                                <div class="filter-buttons">
+                                                    <a class="filter-button" onclick="filterProjects('subject', 'Computer Science')">Computer Science</a>
+                                                    <a class="filter-button" onclick="filterProjects('subject', 'Computer Information Systems')">Computer Information Systems</a>
+                                                    <a class="filter-button" onclick="filterProjects('subject', 'Software Engineering')">Software Engineering</a>
+                                                </div>
+                                            </li>
+                                            <li class="filter-section" id="project-filter-sm">
+                                                <div class="filter-name">By Project Type</div>
+                                                <div class="filter-buttons">
+                                                    <a class="filter-button" onclick="filterProjects('project', 'Capstone Project')">Capstone Project</a>
+                                                    <a class="filter-button" onclick="filterProjects('project', 'Course Project')">Course Project</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        
+                                    </div>
+                                </div>
+
                                 <ul class="project-list">
                                      <!-- Insert project entries here ------------------------------------->
                                      <li class="project-item">
