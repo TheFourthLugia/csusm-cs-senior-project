@@ -63,6 +63,10 @@ li {
     font-size: inherit;
 }
 
+#page-content li {
+    margin-bottom: .5rem;
+}
+
 hr {
     clear: both;
     max-width: 80rem;
@@ -581,10 +585,7 @@ hr {
     color: #004d96;
 }
 
-/* FILTERS FOR MOBILE VIEWRS */
-#page-filter-sm {
-    width: 100%;
-}
+/* FILTERS FOR MOBILE VIEWERS */
 
 #page-filter-sm a {
     color: #47484d;
@@ -756,7 +757,7 @@ hr {
 }
 
 .project-item {
-    margin-bottom: 40px;
+    margin-bottom: 40px !important;
 }
 
 .project-item-badges {
@@ -911,7 +912,7 @@ hr {
 
   .accordion .accordion-item {
     padding-bottom: 0;
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
   }
 
   .accordion-title {
