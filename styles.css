@@ -859,11 +859,12 @@ hr {
   .text {
     color: #f2f2f2;
     font-size: 15px;
-    padding: 8px 12px;
+    padding: 8px 0px;
     position: absolute;
     bottom: 8px;
     width: 100%;
     text-align: center;
+    background-color: rgba(0,0,0,0.8);
   }
   
   /* Number text (1/3 etc) */
